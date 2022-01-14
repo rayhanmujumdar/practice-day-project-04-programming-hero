@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing:  border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* ====================
+common css 
+======================= */
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+:root{
+    --primary-color: #ED0289;
+}
+.word-color{
+    color: var(--primary-color);
+}
+.btn{
+    border: 0;
+    outline: 0;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg,#d22779,#ff008e);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 7px 0px 0px #6e0e45;
+    position: relative;
+    top: 0;
+    text-transform: uppercase;
+    transition: all 0.1s;
+}
+.btn:active{
+    top: 5px;
+    box-shadow: 0 2px 0 0 #6e0e45;
+}
+img{
+    width: 100%;
+}
+.section-title{
+    text-align: center;
+    margin: 40px 0;
+}
+.section-title h1{
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 4px solid #ff008e;
+    display: inline-block;
+    text-transform: uppercase;
+}
+/* ====================
+nav section
+======================= */
+.header{
+    background-image: url(../images/cloud.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: overlay;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+}
+.menu{
+    flex: 3;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu li{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.menu li a{
+    color: white;
+}
+.menu li a:hover{
+    color: green;
+}
+/* =================
+bannar-section
+==================== */
+.bannar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    height: calc(100vh - 60px);
+    min-height: 500px;
+}
+.left-bannar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.left-bannar h1{
+    font-size: 44px;
+    color: white;
+    line-height: 50px;
+}
+.left-bannar p{
+    color: white;
+    padding: 20px 0;
+    line-height: 25px;
+    font-size: 20px;
+}
+.right-bannar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* feature card section start from here */
+.feature-item{
+    width: 100%;
+    margin-top: 20px;
+}
+.feature-cards{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    gap: 40px;
+    justify-content: center;
+    background-image: url(../images/featurebg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 200px;
+}
+.card-item{
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow .5s ease .1s;
+}
+.card-item:hover{
+    box-shadow: 2px 5px 20px 0 rgba(0,0,0,0.5);
+    transition: box-shadow .5s ease .1s;
+}
+.card-item:nth-child(1){
+    text-align: right;
+}
+.card-item:nth-child(3){
+    text-align: right;
+}
+.card-item i{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    background-color: var(--primary-color);
+}
+.card-item h3{
+    color: #ff008e;
+    font-size: 25px;
+    margin: 16px 0;
+}
+.card-item p{
+    font-weight: 600;
+    margin: 10px 0;
+}
+.card-item p a{
+    color: #ff008e;
+}
+/* about section start from here */
+.about-section{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.right-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.right-about h1{
+    color: #ff008e;
+    font-size: 35px;
+}
+.right-about p{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.gallery-img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2em;
+    place-content: center;
+    margin: 30px 0;justify-items: center;
+}
+.photo{
+    width: 300px;
+    height: 170px;
+    overflow: hidden;
+    border: 3px solid #ff008e;
+}
+.photo img{
+    transition: transform .5s ease-in-out .1s;
+}
+.photo:hover img{
+    transform: scale(1.2);
+    cursor: zoom-in;
+}
